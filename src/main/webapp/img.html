@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：HTML_Insert_picture_and_table
+  File name(文件名): img
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/1/17
+  Time(创建时间)： 14:19
+  Description(描述)：
+  HTML 使用 <img> 标签插入图片，img 是 image 的简称。<img> 是自闭和标签，只包含属性，没有结束标签。<img> 标签的语法格式如下：
+<img src="url" alt="text">
+对属性的说明：
+src 是必选属性，它是 source 的简称，用来指明图片的地址或者路径。src 支持多种图片格式，比如 jpg、png、gif 等。src 可以使用相对路径，也可以使用绝对路径。
+alt 是可选属性，用来定义图片的文字描述信息。当由于某些原因（例如图片路径错误、网络连接失败）导致图片无法加载时，就会显示 alt 属性中的信息。
+图像映射
+图像映射允许您在一个图片中定义超链接，实现思想就是在图像中划分一些区域，并在这些区域中定义超链接。例如，我们可以按照地图的划分为每个国家或城市所在的区域定义超链接。
+<map> 标签的 name 属性对应的是 <img> 标签的 usemap 属性，<area>标签用于定义图片的可点击区域，您可以在图像中定义任意数量的可点击区域。
+shape 和 coords 属性
+在 <area> 标签中可以通过 shape 属性来定义可点击区域的形状，并通过 coords 属性来定义形状所对应的坐标。
+其中 shape 属性的可选值有三个，分别是 rect（矩形）、circle（圆形）和 poly（多边形），coords 属性中坐标的值则取决于可点击区域的形状。
+假如定义一个矩形的可点击区域，示例代码如下：
+<area shape="rect" coords="x1, y1, x2, y2" href="http://c.biancheng.net/" alt="">
+其中 x1、y1 代表矩形的左上角坐标，x2、y2 代表矩形的右下角坐标。
+假如定义一个圆形的可点击区域，示例代码如下：
+<area shape="circle" coords="x, y, radius" href="" alt="">
+其中 x、y 代表圆心的坐标，而 radius 则是圆的半径。
+假如定义一个多边形的可点击区域，示例代码如下：
+<area shape="poly" coords="x1, y1, x2, y2, x3, y3, ..., xn, yn" href="http://c.biancheng.net/" alt="">
+其中每对 x 和 y 的值都代表一个多边形的顶点坐标。
+注意：所有坐标都是相对于图片的左上角来计算的。
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入图片</title>
+</head>
+<body>
+<img src="t.png" alt="图片"> <br>
+<img src="t1.png" alt="图片"> <br>
+<img src="t.png" alt="图片" width="200" height="100"> <br>
+<img src="t.png" alt="图片" width="1048" height="260"> <br>
+<img src="t.png" alt="图片" style="width: 200px; height: 100px;"><br>
+<br>
+<img src="t.png" usemap="#objects" alt="图片映射">
+<map name="objects">
+    <area shape="rect" coords="0,0,82,126" href="https://www.bilibili.com/" alt="https://www.bilibili.com/" target="_blank">
+    <area shape="circle" coords="90,58,3" href="https://www.bilibili.com/" alt="https://www.bilibili.com/" target="_blank">
+    <area shape="circle" coords="124,58,8" href="https://www.bilibili.com/" alt="https://www.bilibili.com/" target="_blank">
+</map>
+</body>
+</html>
